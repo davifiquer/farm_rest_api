@@ -1,6 +1,8 @@
 package br.com.fiquer.farm.entities;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 import javax.persistence.Entity;
@@ -9,6 +11,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -32,6 +35,8 @@ public class Cattle implements Serializable {
 	@OneToOne
 	@JoinColumn(name = "stall_id")
 	private Stall stall;
+	@OneToMany(mappedBy = "cattle")
+	private List<Vaccine> vaccines = new ArrayList<>();
 
 	public Cattle() {
 	}
@@ -47,6 +52,10 @@ public class Cattle implements Serializable {
 		this.user = user;
 		this.farm = farm;
 		this.stall = stall;
+	}
+
+	public List<Vaccine> getVaccines() {
+		return vaccines;
 	}
 
 	public Stall getStall() {

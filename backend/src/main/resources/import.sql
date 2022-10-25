@@ -67,8 +67,17 @@ INSERT INTO tb_cattle(identifier, weight, breed, daily_milk_prod, user_id, farm_
 INSERT INTO tb_cattle(identifier, weight, breed, daily_milk_prod, user_id, farm_id, stall_id) VALUES ('SF20220108', 26.1, 'Guzerá', 7.7, 2, 5, 24);
 INSERT INTO tb_cattle(identifier, weight, breed, daily_milk_prod, user_id, farm_id, stall_id) VALUES ('SF20220109', 27.0, 'Guzerá', 4.5, 2, 5, 25);
 INSERT INTO tb_cattle(identifier, weight, breed, daily_milk_prod, user_id, farm_id, stall_id) VALUES ('SF20220110', 23.8, 'Guzerá', 5.5, 2, 5, 26);
-
-
+-- SEED DAS VACINAS
+INSERT INTO tb_vaccine(date, name, cattle_id) VALUES (TIMESTAMP WITH TIME ZONE '2022-10-20T03:00:00Z', 'Febre Aftosa', 1);
+INSERT INTO tb_vaccine(date, name, cattle_id) VALUES (TIMESTAMP WITH TIME ZONE '2022-10-20T03:00:00Z', 'Febre Aftosa', 2);
+INSERT INTO tb_vaccine(date, name, cattle_id) VALUES (TIMESTAMP WITH TIME ZONE '2022-10-20T03:00:00Z', 'Febre Aftosa', 3);
+INSERT INTO tb_vaccine(date, name, cattle_id) VALUES (TIMESTAMP WITH TIME ZONE '2022-10-20T03:00:00Z', 'Febre Aftosa', 4);
+INSERT INTO tb_vaccine(date, name, cattle_id) VALUES (TIMESTAMP WITH TIME ZONE '2022-10-20T03:00:00Z', 'Febre Aftosa', 5);
+INSERT INTO tb_vaccine(date, name, cattle_id) VALUES (TIMESTAMP WITH TIME ZONE '2022-10-20T03:00:00Z', 'Raiva bovina', 6);
+INSERT INTO tb_vaccine(date, name, cattle_id) VALUES (TIMESTAMP WITH TIME ZONE '2022-10-20T03:00:00Z', 'Raiva bovina', 7);
+INSERT INTO tb_vaccine(date, name, cattle_id) VALUES (TIMESTAMP WITH TIME ZONE '2022-10-20T03:00:00Z', 'Raiva bovina', 8);
+INSERT INTO tb_vaccine(date, name, cattle_id) VALUES (TIMESTAMP WITH TIME ZONE '2022-10-20T03:00:00Z', 'Raiva bovina', 9);
+INSERT INTO tb_vaccine(date, name, cattle_id) VALUES (TIMESTAMP WITH TIME ZONE '2022-10-20T03:00:00Z', 'Raiva bovina', 10);
 
 
 
