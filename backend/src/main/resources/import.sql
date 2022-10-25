@@ -25,3 +25,30 @@ INSERT INTO tb_user_farm (user_id, farm_id) VALUES (2, 5);
 INSERT INTO tb_user_farm (user_id, farm_id) VALUES (3, 3);
 INSERT INTO tb_user_farm (user_id, farm_id) VALUES (3, 1);
 
+-- SEED DAS BAIAS
+INSERT INTO tb_stall(sector, farm_id) VALUES ('Norte', 1);
+INSERT INTO tb_stall(sector, farm_id) VALUES ('Sul', 1);
+INSERT INTO tb_stall(sector, farm_id) VALUES ('Leste', 1);
+INSERT INTO tb_stall(sector, farm_id) VALUES ('Oeste', 1);
+--
+INSERT INTO tb_stall(sector, farm_id) VALUES ('Norte', 2);
+INSERT INTO tb_stall(sector, farm_id) VALUES ('Sul', 2);
+INSERT INTO tb_stall(sector, farm_id) VALUES ('Leste', 2);
+INSERT INTO tb_stall(sector, farm_id) VALUES ('Oeste', 2);
+--
+INSERT INTO tb_stall(sector, farm_id) VALUES ('Norte', 3);
+INSERT INTO tb_stall(sector, farm_id) VALUES ('Sul', 3);
+INSERT INTO tb_stall(sector, farm_id) VALUES ('Leste', 3);
+INSERT INTO tb_stall(sector, farm_id) VALUES ('Oeste', 3);
+--
+INSERT INTO tb_stall(sector, farm_id) VALUES ('Norte', 4);
+INSERT INTO tb_stall(sector, farm_id) VALUES ('Sul', 4);
+INSERT INTO tb_stall(sector, farm_id) VALUES ('Leste', 4);
+INSERT INTO tb_stall(sector, farm_id) VALUES ('Oeste', 4);
+--
+INSERT INTO tb_stall(sector, farm_id) VALUES ('Norte', 5);
+INSERT INTO tb_stall(sector, farm_id) VALUES ('Sul', 5);
+INSERT INTO tb_stall(sector, farm_id) VALUES ('Leste', 5);
+INSERT INTO tb_stall(sector, farm_id) VALUES ('Oeste', 5);
+
+

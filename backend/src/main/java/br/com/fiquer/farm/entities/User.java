@@ -54,6 +54,10 @@ public class User implements Serializable {
 		this.name = name;
 	}
 
+	public List<Farm> getFarms() {
+		return farms;
+	}
+
 	public Set<Role> getRoles() {
 		return roles;
 	}
