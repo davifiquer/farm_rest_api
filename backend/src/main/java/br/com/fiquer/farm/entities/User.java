@@ -1,7 +1,9 @@
 package br.com.fiquer.farm.entities;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Objects;
 import java.util.Set;
 
@@ -25,12 +27,13 @@ public class User implements Serializable {
 	private String name;
 	private String email;
 	private String password;
-	
+
 	@ManyToMany(fetch = FetchType.EAGER)
-	@JoinTable(name = "tb_user_role",
-		joinColumns = @JoinColumn(name = "user_id"),
-		inverseJoinColumns = @JoinColumn(name = "role_id"))
+	@JoinTable(name = "tb_user_role", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "role_id"))
 	private Set<Role> roles = new HashSet<>();
+	@ManyToMany
+	@JoinTable(name = "tb_user_farm", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "farm_id"))
+	private List<Farm> farms = new ArrayList<>();
 
 	public User() {
 	}
@@ -42,7 +45,7 @@ public class User implements Serializable {
 		this.password = password;
 		this.name = name;
 	}
-	
+
 	public String getName() {
 		return name;
 	}
@@ -51,8 +54,8 @@ public class User implements Serializable {
 		this.name = name;
 	}
 
-	public void setRoles(Set<Role> roles) {
-		this.roles = roles;
+	public Set<Role> getRoles() {
+		return roles;
 	}
 
 	public Long getId() {
