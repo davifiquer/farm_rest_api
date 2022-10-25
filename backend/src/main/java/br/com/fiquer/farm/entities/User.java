@@ -15,6 +15,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -34,6 +35,8 @@ public class User implements Serializable {
 	@ManyToMany
 	@JoinTable(name = "tb_user_farm", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "farm_id"))
 	private List<Farm> farms = new ArrayList<>();
+	@OneToMany(mappedBy = "user")
+	private List<Cattle> cattle = new ArrayList<>();
 
 	public User() {
 	}

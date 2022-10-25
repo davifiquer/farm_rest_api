@@ -9,6 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -22,6 +23,8 @@ public class Stall implements Serializable {
 	@ManyToOne
 	@JoinColumn(name = "farm_id")
 	private Farm farm;
+	@OneToOne(mappedBy = "stall")
+	private Cattle cattle;
 
 	public Stall() {
 	}
@@ -31,6 +34,14 @@ public class Stall implements Serializable {
 		this.id = id;
 		this.sector = sector;
 		this.farm = farm;
+	}
+
+	public Cattle getCattle() {
+		return cattle;
+	}
+
+	public void setCattle(Cattle cattle) {
+		this.cattle = cattle;
 	}
 
 	public Farm getFarm() {

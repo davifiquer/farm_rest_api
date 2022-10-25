@@ -2,8 +2,10 @@ package br.com.fiquer.farm.entities;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Objects;
+import java.util.Set;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -26,6 +28,8 @@ public class Farm implements Serializable {
 	private List<User> users = new ArrayList<>();
 	@OneToMany(mappedBy = "farm")
 	private List<Stall> stalls = new ArrayList<>();
+	@OneToMany(mappedBy = "farm")
+	private Set<Cattle> cattles = new HashSet<>();
 
 	public Farm() {
 	}
