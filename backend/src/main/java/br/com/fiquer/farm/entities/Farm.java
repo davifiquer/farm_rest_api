@@ -41,6 +41,10 @@ public class Farm implements Serializable {
 		this.city = city;
 	}
 
+	public Set<Cattle> getCattles() {
+		return cattles;
+	}
+
 	public List<Stall> getStalls() {
 		return stalls;
 	}

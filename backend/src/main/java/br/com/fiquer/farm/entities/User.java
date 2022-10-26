@@ -1,9 +1,7 @@
 package br.com.fiquer.farm.entities;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Objects;
 import java.util.Set;
 
@@ -32,11 +30,11 @@ public class User implements Serializable {
 	@ManyToMany(fetch = FetchType.EAGER)
 	@JoinTable(name = "tb_user_role", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "role_id"))
 	private Set<Role> roles = new HashSet<>();
-	@ManyToMany
+	@ManyToMany(fetch = FetchType.EAGER)
 	@JoinTable(name = "tb_user_farm", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "farm_id"))
-	private List<Farm> farms = new ArrayList<>();
+	private Set<Farm> farms = new HashSet<>();
 	@OneToMany(mappedBy = "user")
-	private List<Cattle> cattle = new ArrayList<>();
+	private Set<Cattle> cattle = new HashSet<>();
 
 	public User() {
 	}
@@ -57,7 +55,11 @@ public class User implements Serializable {
 		this.name = name;
 	}
 
-	public List<Farm> getFarms() {
+	public Set<Cattle> getCattle() {
+		return cattle;
+	}
+
+	public Set<Farm> getFarms() {
 		return farms;
 	}
 
@@ -104,6 +106,12 @@ public class User implements Serializable {
 			return false;
 		User other = (User) obj;
 		return Objects.equals(id, other.id);
+	}
+
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", name=" + name + ", email=" + email + ", password=" + password + ", roles=" + roles
+				+ ", farms=" + farms + ", cattle=" + cattle + "]";
 	}
 
 }
