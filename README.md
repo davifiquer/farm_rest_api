@@ -14,5 +14,7 @@ Por fim, é preciso permitir também um histórico das vacinas de cada animal.
 <b>Modelo conceitual</b>
 ![uml_v1](https://user-images.githubusercontent.com/20268288/197793389-9bab84a9-0ffa-4f76-a6d0-3afad111db4b.PNG)
 
+<h1><b>Próximas Atualizações</b></h1>
 
+Concluir o desenvolvimento do ENDPOINT "users", com a opção de remoção de usuário e atualização, com a possibilidade de se atualizar o usuário inserindo gados e fazendas, além dos dados pessoais.
 
